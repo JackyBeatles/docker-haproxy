@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    haproxy:
+        build: .
+        ports:
+            - 8080:80
+        environment:
+            - NODE_1_IP={IP}
+            - NODE_2_IP={IP}
+            - NODE_3_IP={IP}
+            - NODE_EXPOSED_PORT={PORT}
+        expose:
+            - 80
